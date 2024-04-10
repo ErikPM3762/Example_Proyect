@@ -1,0 +1,57 @@
+apply from: "$rootProject.projectDir/buildsystem/libraries.gradle"
+def library = ext.libraries
+
+dependencies {
+
+    //ANDROID BASE
+    implementation "${library.androidx_core}"
+    implementation "${library.androidx_app_compat}"
+    implementation "${library.androidx_constraint_layout}"
+    implementation "${library.androidx_navigation}"
+    implementation "${library.fragment_ktx}"
+    implementation "${library.androidx_navigation_fragment}"
+    implementation "${library.androidx_navigation_dynamic}"
+
+    //ANDROID OPTIONAL
+    implementation "${library.androidx_swipe_refresh}"
+    implementation "${library.google_hilt}"
+    implementation "${library.navigation_hilt}"
+    implementation "${library.gson_code}"
+    implementation "${library.retrofit}"
+    implementation "${library.retrofit_converter}"
+    implementation "${library.kotlinx_coroutines}"
+    implementation "${library.glide}"
+    implementation "${library.glide_ok_http}"
+    implementation "${library.lifecycle_library_core}"
+    implementation "${library.coroutine_retrofit}"
+    implementation "${library.reactivex}"
+    implementation "${library.reactivex_android}"
+    implementation "${library.okhttp3}"
+
+    //MATERIAL BASE
+    implementation "${library.android_material}"
+
+
+    //TEST
+    implementation "${library.junit_test}"
+    implementation "${library.android_test_implementation}"
+    implementation "${library.android_testespresso}"
+    implementation "${library.mockk}"
+    implementation "${library.arch_core}"
+    implementation "${library.junit_ktx}"
+
+    //KAPT
+    kapt "${library.databinding_kapt}"
+    kapt "${library.hilt_kapt}"
+    kapt "${library.kapt_glide}"
+
+    //EXTERNAL LIBRARY
+    implementation "${library.ssp_dimensv0}"
+    implementation "${library.ssp_dimensv6}"
+    implementation "${library.confirm_pass}"
+
+    //JAVA
+    implementation "${library.javax_inject}"
+    implementation "${library.squeareup_okHttp}"
+    implementation "${library.squeareup_interceptor}"
+}

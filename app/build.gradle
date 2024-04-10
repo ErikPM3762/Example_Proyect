@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+}
+apply plugin: 'dagger.hilt.android.plugin'
+
+apply from: rootProject.file("buildSystem/libraries.gradle")
+def libraries = ext.libraries
+
+apply from: "$rootProject.projectDir/buildsystem/genericbuild.gradle"
+def configuration = ext.configuration
+
+android {
+    namespace 'com.example.exapleproyect'
+    compileSdk configuration.compileSdkVersion
+
+    defaultConfig {
+        applicationId "com.example.exapleproyect"
+        minSdkVersion configuration.minSdkVersion
+        targetSdkVersion configuration.targetSdkVersion
+        versionCode configuration.versionCode
+        versionName configuration.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+}
+
+dependencies {
+    implementation "${libraries.androidx_core}"
+    implementation "${libraries.androidx_app_compat}"
+    implementation "${libraries.android_material}"
+    implementation "${libraries.junit_test}"
+    implementation "${libraries.android_test_implementation}"
+    implementation "${libraries.android_testespresso}"
+    implementation "${libraries.mockk}"
+    implementation "${libraries.arch_core}"
+    implementation "${libraries.kotlinx_coroutines}"
+    implementation "${libraries.androidx_constraint_layout}"
+    implementation "${libraries.androidx_navigation}"
+    implementation "${libraries.kotlinx_coroutines}"
+    implementation "${libraries.androidx_constraint_layout}"
+    implementation "${libraries.androidx_navigation}"
+
+    implementation "${libraries.junit_ktx}"
+    implementation "${libraries.google_hilt}"
+    kapt "${libraries.hilt_kapt}"
+
+    implementation "${libraries.androidx_navigation_fragment}"
+    implementation "${libraries.gson_code}"
+    implementation "${libraries.reactivex}"
+    implementation "${libraries.reactivex_android}"
+    implementation "${libraries.retrofit}"
+    implementation "${libraries.retrofit_converter}"
+    implementation "${libraries.okhttp3}"
+    implementation "${libraries.kotlinx_coroutines}"
+    implementation "${libraries.coroutine_retrofit}"
+    implementation "${libraries.glide}"
+}
