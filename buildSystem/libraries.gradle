@@ -43,10 +43,6 @@ ext.libraries = [
         databinding_kapt             : "com.android.databinding:compiler:$version.databindingKapt",
         hilt_kapt                    : "com.google.dagger:hilt-compiler:$version.hiltKapt",
 
-        //EXTERNAL LIBRARY
-        ssp_dimensv0                 : "com.intuit.sdp:sdp-android:$version.sspDimensv0",
-        ssp_dimensv6                 : "com.intuit.ssp:ssp-android:$version.sspDimensv6",
-        confirm_pass                 : "com.github.fraggjkee:sms-confirmation-view:$version.confirmPass",
 
         //JAVA
         javax_inject                  : "javax.inject:javax.inject:$version.javaxInject",

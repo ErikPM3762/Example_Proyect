@@ -4,7 +4,6 @@ ext.versionlibrary = [
         androidxCore              : "1.7.0",
         androidxAppCompat         : "1.4.1",
         androidConstraintLayout   : "2.1.3",
-        androidSwipeRefresh       : "1.1.0",
         androidxNavigation        : "2.5.2",
 
         //ANDROID OPTIONAL
@@ -49,8 +48,4 @@ ext.versionlibrary = [
         maps                      : "17.0.0",
         location                  : "21.0.1",
 
-        //EXTERNAL LIBRARY
-        sspDimensv0               : "1.0.0",
-        sspDimensv6               : "1.0.6",
-        confirmPass               : "1.7.1"
 ]
